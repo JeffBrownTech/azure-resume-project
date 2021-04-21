@@ -12,10 +12,6 @@ param (
     [string]
     $StaticWebsiteUrl,
 
-    [Parameter(Mandatory, HelpMessage='This is the custom domain name to map.')]
-    [string]
-    $CustomDomain,
-
     [Parameter()]
     [ValidateSet('Custom_Verizon','Premium_ChinaCdn','Premium_Verizon','StandardPlus_955BandWidth_ChinaCdn','StandardPlus_AvgBandWidth_ChinaCdn',`
         'StandardPlus_ChinaCdn','Standard_955BandWidth_ChinaCdn','Standard_Akamai','Standard_AvgBandWidth_ChinaCdn','Standard_ChinaCdn','Standard_Microsoft','Standard_Verizon')]
