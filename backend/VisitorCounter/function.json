@@ -1,0 +1,36 @@
+{
+    "bindings": [
+      {
+        "authLevel": "function",
+        "type": "httpTrigger",
+        "direction": "in",
+        "name": "Request",
+        "methods": [
+          "get",
+          "post"
+        ]
+      },
+      {
+        "type": "http",
+        "direction": "out",
+        "name": "Response"
+      },
+      {
+        "name": "CosmosIn",
+        "databaseName": "AzureResume",
+        "collectionName": "VisitorCounter",
+        "connectionStringSetting": "cosmos-jbtazresume-prod_DOCUMENTDB",
+        "sqlQuery": "SELECT * FROM c WHERE c.id = \"1\"",
+        "direction": "in",
+        "type": "cosmosDB"
+      },
+      {
+        "name": "cosmosOut",
+        "direction": "out",
+        "type": "cosmosDB",
+        "databaseName": "AzureResume",
+        "collectionName": "VisitorCounter",
+        "connectionStringSetting": "cosmos-jbtazresume-prod_DOCUMENTDB"
+      }
+    ]
+  }
