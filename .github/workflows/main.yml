@@ -1,0 +1,33 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Deploy frontend to blob store
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+            az storage blob upload-batch --account-name stjbtazureresumeprod --destination '$web' --source frontend
+    - name: Purge CDN endpoint
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+           az cdn endpoint purge --content-paths  "/*" --profile-name "cdnp-azureresume" --name "cdne-jeffbrowntech-me" --resource-group "azureresume-rg"
+    - name: logout
+      run: |
+        az logout
