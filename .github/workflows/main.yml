@@ -19,7 +19,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Upload to blob storage
-      uses: azure/CLI@v1
+      uses: azure/CLI@V1
       with:
         inlineScript: |
             az storage blob upload-batch --account-name stjbtazureresumeprod --destination '$web' --source frontend
