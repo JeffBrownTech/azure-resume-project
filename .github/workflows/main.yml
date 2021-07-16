@@ -33,7 +33,7 @@ jobs:
       uses: Azure/cli@1.0.4
       with:
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "cdnp-azureresume" --name "cdne-jeffbrowntech-me" --resource-group "azureresume-rg" --no-wait
+           az cdn endpoint purge --content-paths  "/*" --profile-name "cdnp-azureresume" --name "cdne-jeffbrowntech-me" --resource-group "azureresume2-rg" --no-wait
     - name: logout
       run: |
         az logout
