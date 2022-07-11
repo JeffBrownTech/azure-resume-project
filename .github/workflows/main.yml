@@ -20,7 +20,7 @@ jobs:
       uses: Azure/cli@1.0.4
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name stjbtazureresumeprod --destination '$web' --source frontend
+            az storage blob upload-batch --account-name stjbtazureresumeprod --destination '$web' --source frontend --overwrite
     - name: Copy function code files
       uses: Azure/cli@1.0.4
       with:
