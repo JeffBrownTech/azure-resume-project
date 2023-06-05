@@ -171,7 +171,12 @@ h5 { font-size: 18px; line-height: 30px; }
 h6 { font-size: 14px; line-height: 30px; }
 .subheader { }
 
-p { margin: 0 0 30px 0; }
+p { 
+   margin: 0 0 30px 0;
+   color: #000;
+   font-weight: 600;
+   font-size: 16px;
+}
 p img { margin: 0; }
 p.lead {
    font: 19px/36px 'opensans-light', sans-serif;

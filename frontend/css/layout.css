@@ -278,6 +278,7 @@ ul#nav li.current a { color: #0090f0; }
    color: #6E7881;
    margin-bottom: 18px;
    margin-top: 9px;
+   font-weight: 500px;
 }
 #resume .info span {
    margin-right: 5px;
@@ -286,6 +287,7 @@ ul#nav li.current a { color: #0090f0; }
 #resume .date {
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
+   font-weight: 500px;
 }
 
 /*----------------------------------------------*/
