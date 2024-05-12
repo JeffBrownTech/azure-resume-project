@@ -4,7 +4,8 @@ name: Deploy frontend to blob store
 
 # Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  workflow_dispatch:
+  # Triggers the workflow on push or pull request events but only for the main branch  
   push:
     branches:
       - main
